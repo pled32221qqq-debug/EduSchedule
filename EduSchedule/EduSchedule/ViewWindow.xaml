@@ -1,0 +1,9 @@
+﻿<Window x:Class="EduSchedule.ViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Просмотр расписания" Height="500" Width="800"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="15">
+        <DataGrid x:Name="dgView" AutoGenerateColumns="True" IsReadOnly="True" AlternatingRowBackground="#F0F0F0" CanUserAddRows="False"/>
+    </Grid>
+</Window>

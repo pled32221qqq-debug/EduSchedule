@@ -1,0 +1,74 @@
+﻿<Window x:Class="EduSchedule.DictionaryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Управление справочниками" Height="500" Width="750"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <TabControl>
+            <!-- Группы -->
+            <TabItem Header="Группы">
+                <StackPanel Margin="5">
+                    <DataGrid x:Name="dgGroups" AutoGenerateColumns="False" Height="300" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                            <DataGridTextColumn Header="Наименование" Binding="{Binding Name}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <Button Content="Добавить" Width="100" Click="BtnAddGroup_Click"/>
+                        <Button Content="Удалить" Width="100" Margin="10,0,0,0" Click="BtnDeleteGroup_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Преподаватели -->
+            <TabItem Header="Преподаватели">
+                <StackPanel Margin="5">
+                    <DataGrid x:Name="dgTeachers" AutoGenerateColumns="False" Height="300" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                            <DataGridTextColumn Header="ФИО" Binding="{Binding Name}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <Button Content="Добавить" Width="100" Click="BtnAddTeacher_Click"/>
+                        <Button Content="Удалить" Width="100" Margin="10,0,0,0" Click="BtnDeleteTeacher_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Дисциплины -->
+            <TabItem Header="Дисциплины">
+                <StackPanel Margin="5">
+                    <DataGrid x:Name="dgDisciplines" AutoGenerateColumns="False" Height="300" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                            <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <Button Content="Добавить" Width="100" Click="BtnAddDisc_Click"/>
+                        <Button Content="Удалить" Width="100" Margin="10,0,0,0" Click="BtnDeleteDisc_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Аудитории -->
+            <TabItem Header="Аудитории">
+                <StackPanel Margin="5">
+                    <DataGrid x:Name="dgRooms" AutoGenerateColumns="False" Height="300" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                            <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="100"/>
+                            <DataGridTextColumn Header="Тип" Binding="{Binding Type}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <Button Content="Добавить" Width="100" Click="BtnAddRoom_Click"/>
+                        <Button Content="Удалить" Width="100" Margin="10,0,0,0" Click="BtnDeleteRoom_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
